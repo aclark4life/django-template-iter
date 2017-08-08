@@ -7,6 +7,7 @@ from collections import OrderedDict
 
 # Create your views here.
 
+
 def home(request):
     context = {}
     items = TestModel.objects.all()
@@ -16,4 +17,4 @@ def home(request):
         for field in fields:
             item.fields[field.name] = getattr(item, field.name)
     context['items'] = items
-    return render(request, 'base.html', context) 
+    return render(request, 'base.html', context)

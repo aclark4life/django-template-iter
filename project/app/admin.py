@@ -6,6 +6,7 @@ from .models import TestModel
 
 # Register your models here.
 
+
 @admin.register(TestModel)
 class TestModelAdmin(admin.ModelAdmin):
     """
